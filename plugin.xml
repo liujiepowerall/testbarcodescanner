@@ -49,7 +49,9 @@
 				</intent-filter>  
 			</activity>
 		</config-file>
-		
+		<config-file target="project.properties" parent="/*">  		
+			android.library.reference.2=../../plugins/com.powerall.plugin.barcodescanner/src/BarcodeScannerLibrary
+		</config-file>
         <config-file target="AndroidManifest.xml" parent="/*">  		
 			<uses-permission android:name="android.permission.CAMERA" />  
 			<uses-permission android:name="android.permission.VIBRATE" />  
@@ -73,7 +75,6 @@
         </config-file>
 
         <source-file src="src/android/BarcodeScanner.java" target-dir="src/com/powerall/plugin/barcodescanner" />
-		<source-file src="src/BarcodeScannerLibrary" target-dir="/" />
         <source-file src="barcode_scanner_strings.xml" target-dir="res/values" />
     </platform>  
 
