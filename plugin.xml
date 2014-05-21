@@ -49,9 +49,6 @@
 				</intent-filter>  
 			</activity>
 		</config-file>
-		<config-file target="project.properties" parent="/*">  		
-			android.library.reference.2=../../plugins/com.powerall.plugin.barcodescanner/src/BarcodeScannerLibrary
-		</config-file>
         <config-file target="AndroidManifest.xml" parent="/*">  		
 			<uses-permission android:name="android.permission.CAMERA" />  
 			<uses-permission android:name="android.permission.VIBRATE" />  
@@ -73,9 +70,30 @@
 			<uses-feature android:name="android.hardware.camera" />  
 			<uses-feature android:name="android.hardware.camera.autofocus" />  
         </config-file>
-
+		<config-file target="AndroidManifest.xml" parent="/*">  		
+			<uses-permission android:name="android.permission.CAMERA" />  
+			<uses-permission android:name="android.permission.VIBRATE" />  
+			<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />  
+			<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />  
+			<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />  
+			<uses-permission android:name="android.permission.INTERNET" />  
+			<uses-permission android:name="android.permission.RECEIVE_SMS" />  
+			<uses-permission android:name="android.permission.RECORD_AUDIO" />  
+			<uses-permission android:name="android.permission.RECORD_VIDEO"/>  
+			<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />  
+			<uses-permission android:name="android.permission.READ_CONTACTS" />  
+			<uses-permission android:name="android.permission.WRITE_CONTACTS" />     
+			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />     
+			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />  
+			<uses-permission android:name="android.permission.GET_ACCOUNTS" />  
+			<uses-permission android:name="android.permission.BROADCAST_STICKY" /> 
+			
+			<uses-feature android:name="android.hardware.camera" />  
+			<uses-feature android:name="android.hardware.camera.autofocus" />  
+        </config-file>
         <source-file src="src/android/BarcodeScanner.java" target-dir="src/com/powerall/plugin/barcodescanner" />
         <source-file src="barcode_scanner_strings.xml" target-dir="res/values" />
+		<source-file src="project.properties" target-dir="/" />
     </platform>  
 
 </plugin>
