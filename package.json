@@ -1,0 +1,13 @@
+{
+    "version": "0.0.1",
+    "name": "com.powerall.plugin.barcodescanner",
+    "cordova_name": "barcodescanner",
+    "description": "barcodescanner plugin description",
+    "license": "Apache 2.0",
+    "keywords": [
+        "powerall",
+        "barcodescanner",
+        "liujie"
+    ],
+    "engines": []
+}
